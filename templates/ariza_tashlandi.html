@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ariza Yuborildi</title>
+    <link href="{% static 'main.css' %}" rel="stylesheet">
+</head>
+<body class="font-signika bg-gray-100 flex items-center justify-center h-screen">
+
+    <div class="bg-white shadow-lg rounded-xl p-8 text-center max-w-lg w-full">
+        <img src="{% static 'img/img/success.png' %}" alt="Success" class="w-24 h-24 mx-auto mb-4">
+        <h2 class="text-2xl font-bold text-br-green">Rahmat! ✅</h2>
+        <p class="text-lg text-gray-600 mt-2">Sizning arizangiz muvaffaqiyatli qabul qilindi.</p>
+
+        <div style="position: relative; background-color: blue; top: 10px;" class="mt-6">
+            <a href="{% url 'dashboard' %}" class="bg-blue-500 text-white px-6 py-3 rounded-lg text-lg transition-all duration-300 hover:bg-blue-600">
+                🔙 Bosh sahifaga qaytish
+            </a>
+        </div>
+    </div>
+
+</body>
+</html>

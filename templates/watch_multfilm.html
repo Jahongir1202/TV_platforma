@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ video.title }}</title>
+</head>
+<body>
+    <h2>{{ video.title }}</h2>
+
+    <iframe width="560" height="315" src="{{ video.embed_video }}"
+            frameborder="0" allowfullscreen></iframe>
+
+    <br>
+    <a href="{% url 'multfilmlar' %}">
+        <button>Ortga</button>
+    </a>
+</body>
+</html>

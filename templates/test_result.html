@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <title>Test Natijalari</title>
+</head>
+<body>
+    <h2>Test Natijalari</h2>
+
+    {% if result %}
+        <p>Sizning natijangiz: <b>{{ result.score }}/{{ result.total_questions }}</b></p>
+    {% else %}
+        <p>Siz hali test ishlamadingiz.</p>
+    {% endif %}
+
+    <a href="{% url 'dashboard' %}">
+        <button>Bosh Sahifaga</button>
+    </a>
+</body>
+</html>

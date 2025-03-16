@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Videolar</title>
+</head>
+<body>
+    <h2>Videolar</h2>
+
+    {% if error %}
+        <p style="color: red;">{{ error }}</p>
+    {% endif %}
+
+    {% for video in videos %}
+        <h3>{{ video.title }}</h3>
+
+        {% if video.can_watch %}
+            <a href="{% url 'watch_video' video.id %}">
+                <button>Videoni ko‘rish</button>
+            </a>
+        {% else %}
+            <button disabled style="background-color: gray;">Yangi video mavjud</button>
+        {% endif %}
+
+        <br>
+    {% empty %}
+        <p>Hozircha video mavjud emas.</p>
+    {% endfor %}
+
+    <a href="{% url 'dashboard' %}">
+        <button>Ortga</button>
+    </a>
+</body>
+</html>

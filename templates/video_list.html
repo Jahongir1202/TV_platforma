@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ category|title }} Videolar</title>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta id="description" name="description"
+        content="Bola Tv - bolalar uchun sifatli va foydali bo'lgan ertaklar, multfilmlar, rasm chizish va qolaversa ingliz va rus tili darslari joylashgan.">
+    <meta id="keywords" name="keywords"
+        content="bolatv, Bolatv, BolaTv, bolatv sayti, Bolatv sayti, bolatv.uz, Bolatv.uz">
+    <title>Bola TV</title>
+    <meta name="google-site-verification" content="CI33uSVkcyFnqNXDZ9cGcVsbOzwa8c6bK9AiFzyZ5GM" />
+    <meta name="googlebot" id="googlebot" content="index, follow">
+    <meta name="yandex-verification" content="0d98a88b237bac56" />
+    <meta name="yandex-verification" id="yandex-verification" content="index, follow">
+    <meta name="yandex" id="yandex" content="index, follow">
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://bolatv.uz/" />
+    <meta property="og:image" content="https://bolatv.uz/img/img/favicon.svg" />
+    <meta property="og:image:width" content="1036" />
+    <meta property="og:image:height" content="416" />
+    <meta property="og:image:type" content="image/svg" />
+    <link rel="website icon" href="./img/img/favicon.svg" type="svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Signika+Negative:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4611912129342481"
+        crossorigin="anonymous"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-5XDD1T8MV3"></script>
+    <script>window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-5XDD1T8MV3');</script>
+    <script defer="defer" src="../static/bundle.js"></script>
+    <link href="../static/main.css" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'main.css' %}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Signika:wght@400;600&display=swap">
+    <style>
+        .box {
+            font-family: 'Signika', sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            width:400px;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        h2 {
+            color: #333;
+            margin-bottom: 15px;
+        }
+        .video-list {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .video-item {
+            background: #f8f9fa;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 12px 15px;
+            border-radius: 8px;
+            transition: background 0.3s ease;
+            cursor: pointer;
+        }
+        .video-item:hover {
+            background: #e9ecef;
+        }
+        .video-title {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 16px;
+            font-weight: 600;
+            color: #333;
+        }
+        .video-icon {
+            color: #007bff;
+            font-size: 20px;
+        }
+        .status-icon {
+            color: #28a745;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body class="font-signika"><button id="btn-back-to-top" type="button" data-mdb-ripple="true"
+        data-mdb-ripple-color="light"
+        class="fixed z-50 inline-block p-3 bg-red-600 text-white font-medium text-xs leading-tight uppercase rounded-full shadow-md hover:shadow-lg transition duration-150 ease-in-out bottom-5 right-5"><svg
+            aria-hidden="true" focusable="false" data-prefix="fas" class="w-4 h-4" role="img"
+            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+            <path fill="currentColor"
+                d="M34.9 289.5l-22.2-22.2c-9.4-9.4-9.4-24.6 0-33.9L207 39c9.4-9.4 24.6-9.4 33.9 0l194.3 194.3c9.4 9.4 9.4 24.6 0 33.9L413 289.4c-9.5 9.5-25 9.3-34.3-.4L264 168.6V456c0 13.3-10.7 24-24 24h-32c-13.3 0-24-10.7-24-24V168.6L69.2 289.1c-9.3 9.8-24.8 10-34.3.4z">
+            </path>
+        </svg></button>
+    <header class="bg-gradient-to-r from-[#FAEDDD] to-[#DBF0FB] py-7 md:pb-14">
+        <div class="w-full max-w-base px-5 mx-auto">
+            <div class="flex justify-between items-center md:mb-8"><a class="font-serif font-bold text-2xl sm:text-3xl"
+                    href="">Bola Tv</a><a
+                    class="hidden md:inline-block bg-blue-200 px-5 py-2 rounded transition-all duration-300 hover:bg-green-300"
+                    href="https://t.me/bolatvuz" target="_blank"><i class="fa-brands fa-telegram mr-2"></i> <span>Obuna
+                        bo'lish</span> </a><button id="menu"
+                    class="inline-block active:opacity-60 focus:outline-none md:hidden"><img src="{% static './img/img/menu.svg' %}"
+                        alt="Hamburger menu" width="55" height="55"></button></div>
+            <nav class="hidden md:flex justify-center items-center px-5 py-3 bg-white rounded-lg shadow-md">
+                <ul class="flex flex-wrap gap-x-9">
+                    <li><a class="text-xl text-green-600 font-medium" href="{% url 'dashboard' %}">Bosh sahifa</a></li>
+                    <li><a class="text-xl font-medium transition-all duration-300 hover:text-green-600"
+                           href="{% url 'video_list' category='ertaklar' %}">Ertaklar</a></li>
+                    <li><a class="text-xl font-medium transition-all duration-300 hover:text-green-600"
+                           href="{% url 'video_list' category='multfilmlar' %}">Multfilm</a></li>
+                    <li><a class="text-xl font-medium transition-all duration-300 hover:text-green-600"
+                           href="{% url 'video_list' category='qoshiqlar' %}">Qo'shiqlar</a></li>
+                    <li><a class="text-xl font-medium transition-all duration-300 hover:text-green-600"
+                           href="{% url 'video_list' category='matematika' %}">Qiziqarli matematika</a></li>
+                    <li><a class="text-xl font-medium transition-all duration-300 hover:text-green-600"
+                           href="{% url 'video_list' category='ingliztili' %}">Ingliz tili</a></li>
+                    <li><a class="text-xl font-medium transition-all duration-300 hover:text-green-600"
+                           href="{% url 'video_list' category='badantarbiya' %}">Badantarbiya</a></li>
+                    <li><a class="text-xl font-medium transition-all duration-300 hover:text-green-600"
+                           href="{% url 'video_list' category='rasmlar' %}">Rasm</a></li>
+                    <li><a class="text-xl font-medium transition-all duration-300 hover:text-green-600"
+                           href="{% url 'ariza_qoldirish' %}">Murojaat</a></li>
+                </ul>
+            </nav>
+
+        </div>
+        <div id="open-menu"
+            class="transition-all duration-500 -translate-x-full w-full fixed top-0 h-full z-50 md:hidden"><button
+                id="mob-exit" class="z-50 absolute top-7 right-5"><img src="{% static './img/img/mob-exit.png' %}" alt="Exit icon"
+                    width="50" height="50"></button>
+            <div id="overl" class="bg-white/20 fixed top-0 h-full w-full"></div>
+            <div class="flex flex-col max-w-[320px] h-full overflow-auto bg-white pt-5 px-6 pb-14 fixed">
+                <div class="pt-4 pb-5 border-b"><a class="font-serif font-bold text-2xl sm:text-3xl text-br-green"
+                        href="index.html">Bola Tv</a></div>
+                <ul id="mobile-nav" class="flex flex-col w-full h-auto border-b divide-y divide-dashed">
+                    <li class="py-1"><a class="inline-block w-full active text-xl font-medium text-green-600"
+                            href="index.html">Bosh sahifa</a></li>
+                    <li class="py-1"><a class="inline-block w-full text-xl font-medium" href="{% url 'video_list' category='ertaklar' %}">Ertaklar</a>
+                    </li>
+                    <li class="py-1"><a class="inline-block w-full text-xl font-medium" href="{% url 'video_list' category='multifilm' %}">Multfilm</a>
+                    </li>
+                    <li class="py-1"><a class="inline-block w-full text-xl font-medium" href="{% url 'video_list' category='qoshiqlar' %}">Qo'shiqlar</a>
+                    </li>
+                    <li class="py-1"><a class="inline-block w-full text-xl font-medium" href="{% url 'video_list' category='matematika' %}">Qiziqarli
+                            matematika</a></li>
+                    <li class="py-1"><a class="inline-block w-full text-xl font-medium" href="{% url 'video_list' category='ingliztili' %}">Ingliz
+                            tili</a></li>
+                    <li class="py-1"><a class="inline-block w-full text-xl font-medium"
+                            href="{% url 'video_list' category='badantarbiya' %}">Badantarbiya</a></li>
+                    <li class="py-1"><a class="inline-block w-full text-xl font-medium" href="{% url 'video_list' category='rasmlar' %}">Rasm</a></li>
+                    <li class="py-1"><a class="inline-block w-full text-xl font-medium" href="{% url 'ariza_qoldirish' %}">Murojaat</a>
+                    </li>
+                </ul><a class="mt-5 bg-blue-200 px-5 py-2 rounded transition-all duration-300 hover:bg-green-300"
+                    href="https://t.me/bolatvuz" target="_blank"><i class="fa-brands fa-telegram mr-2"></i> <span>Obuna
+                        bo'lish</span></a>
+            </div>
+        </div>
+    </header>
+    <div class="mb-5">
+            <div class="relative w-full"><img class="w-full h-36 md:h-48" src="{% static 'img/img/home-page.png' %}" alt="">
+                <h1
+                    class="absolute top-10 left-1/2 -translate-x-1/2 text-xl text-br-red font-bold sm:text-2xl sm:top-14 md:text-4xl md:top-16 lg:text-5xl">
+                    {{ category|title }} Videolar</h1>
+            </div>
+    </div>
+    <div class="box">
+        <div class="container">
+        <h2></h2>
+
+        <div class="video-list">
+            {% for video in videos %}
+                <div class="video-item">
+                    <div class="video-title">
+                        <span class="video-icon">▶</span>
+                        {{ video.title }}
+                    </div>
+                    {% if video.can_watch %}
+                        <a href="{% url 'watch_video' category=category video_id=video.id %}"
+                           class="inline-block bg-green-500 text-white px-5 py-3 rounded-lg text-center transition-all duration-300 shadow-md hover:bg-green-700 mt-3">
+                            ▶️ Videoni Ko‘rish
+                        </a>
+                    {% else %}
+                        <span class="status-icon">⏳</span>
+                    {% endif %}
+                </div>
+            {% empty %}
+                <p class="text-gray-700">Hozircha video mavjud emas.</p>
+            {% endfor %}
+        </div>
+
+        <div class="mt-4">
+            <a style="color:blue; top:10px;" href="{% url 'dashboard' %}" class="bg-blue-600 text-white px-6 py-3 rounded-lg shadow-lg hover:bg-blue-700 transition-all duration-300">
+                 Dashboard
+            </a>
+        </div>
+    </div>
+    </div>
+
+</body>
+</html>
