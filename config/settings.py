@@ -24,10 +24,13 @@ SECRET_KEY = "django-insecure-&s(!st5@w4zloy-k&h#xx4f#o!8i&e)in$k2p7id1t-w=3y1(z
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
+if path not in sys.path:
+    sys.path.append(path)
 
 ALLOWED_HOSTS = ["*"]
 
-
+from django.core.wsgi import get_wsgi_application
+application = get_wsgi_application()
 # Application definition
 
 INSTALLED_APPS = [
