@@ -1,21 +1,63 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="uz">
 <head>
     <meta charset="UTF-8">
-    <title>Test</title>
+    <title>Test Savollari</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Maxsus CSS -->
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: 'Segoe UI', sans-serif;
+        }
+        .form-container {
+            max-width: 600px;
+            margin: 60px auto;
+            padding: 40px;
+            background-color: #ffffff;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            border-radius: 10px;
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #343a40;
+        }
+        .btn-primary {
+            width: 100%;
+        }
+        .btn-secondary {
+            width: 100%;
+            margin-top: 10px;
+        }
+    </style>
 </head>
 <body>
-    <h2>Test Savollari</h2>
 
-    <form method="post">
-        {% csrf_token %}
-        {{ form.as_p }}
+<div class="container">
+    <div class="form-container">
+        <h2>Test Savollari</h2>
 
-        <button type="submit">Testni Yuborish</button>
-    </form>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
 
-    <a href="{% url 'dashboard' %}">
-        <button>Ortga</button>
-    </a>
+            <button type="submit" class="btn btn-primary">Testni Yuborish</button>
+        </form>
+
+        <a href="{% url 'dashboard' %}">
+            <button type="button" class="btn btn-secondary">Ortga</button>
+        </a>
+    </div>
+</div>
+
+<!-- Bootstrap JS (ixtiyoriy) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>

@@ -1,0 +1,397 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ancizar+Serif:ital,wght@0,300..900;1,300..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+body {
+    background-image: url(../img/img/bg.komp.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    background-size: cover;
+}
+
+nav .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 0px;
+    font-size: 20px;
+}
+
+.logo img{
+    width: 220px;
+    height: 60px;
+}
+
+.btn {
+    padding: 8px 18px;
+    background-color: rgb(38, 57, 119);
+    color: aliceblue;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: "Jost", sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: start;
+}
+
+.btn i {
+    font-size: 20px;
+}
+
+.modal{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(9, 41, 218, 0.651);
+    backdrop-filter: blur(3px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: -100%;
+    transition: all .3s ease;
+}
+
+.modal.active {
+    top: 0;
+}
+
+.modal_info {
+    background-color: rgb(38, 57, 119);
+    padding: 20px;
+    border-radius: 10px;
+    width: 500px;
+    position: relative;
+}
+
+.modal_info button {
+    padding: 5px 15px;
+    background-color: orange;
+    color: aliceblue;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+}
+
+.admin {
+    text-align: center;
+    padding: 2px;
+    margin: 5px 0;
+    font-family: "Ancizar Serif", serif;
+    color: orange;
+}
+
+.admin i {
+    font-size: 66px;
+}
+
+.modal_info .login,
+.modal_info .password {
+    background-color: white;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 4px 8px;
+    border-radius: 10px;
+}
+
+.modal_info .login input,
+.modal_info .password input {
+    border: none;
+    outline: none;
+    width: 100%;
+}
+
+.modal_btns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.login_btn,
+.exit_modal {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+.modal_info form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.modal_info form input,
+.modal_info form label {
+    font-size: 18px;
+    padding: 4px;
+}
+
+.modal_info .btn {
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.hero .hero_infos {
+    display: flex;
+    align-items: center;
+    gap: 70px;
+    margin-top: 120px;
+}
+
+.hero_info {
+    font-family: "Ancizar Serif", serif;
+    width: 50%;
+}
+
+
+.hero_img {
+    width: 480px;
+    height: 380px;
+    margin: 30px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.hero_img img{
+    height: 382px;
+    width: 492px;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+.hero_img img:hover{
+    transform: scale(1.01);
+    cursor: pointer;
+}
+
+.hero_info h1 {
+    font-size: 44px;
+    color: rgb(33, 57, 136);
+}
+
+.hero_info p {
+    padding: 10px 0;
+    font-size: 20px;
+    font-weight: 400;
+    color: rgb(107, 104, 104);
+}
+
+.hero_info button {
+    font-family: "Jost", sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 8px 18px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    border-radius: 15px;
+    border: none;
+    background-color: orange;
+    color: rgb(38, 57, 119);
+    margin-top: 15px;
+}
+
+
+
+.contakt {
+    text-align: center;
+}
+
+.contakt_info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+/* ================= RESPONSIVE ================= */
+
+/* MOBILE */
+@media (max-width: 640px) {
+    nav .container {
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 8px;
+        font-size: 16px;
+        padding: 10px
+    }
+
+
+    .logo img{
+    width: 140px;
+    height: 40px;
+    }
+
+    .btn i {
+    font-size: 16px;
+    }
+
+
+
+
+    body {
+    background-image: url(../imgs/phonebg.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    background-size: cover;
+    }
+
+
+
+
+    .hero .hero_infos {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        margin-top: 60px;
+        padding: 5px 20px;
+        text-align: center;
+    }
+
+    .hero_info {
+        width: 100%;
+        text-align: center;
+
+    }
+
+    .hero_info h1 {
+        font-size: 26px;
+    }
+
+    .hero_info p {
+        font-size: 16px;
+    }
+
+    .hero_info button {
+        margin: 0 auto; /* Center the button */
+    }
+
+    .hero_img {
+        width: 90%;
+        height: auto;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .btn, .hero_info button {
+        font-size: 14px;
+        padding: 6px 10px;
+    }
+
+    .modal_info {
+        width: 90%;
+        padding: 10px;
+    }
+
+    .modal_info form input,
+    .modal_info form label {
+        font-size: 16px;
+    }
+}
+
+/* PLANSHE */
+@media (min-width: 641px) and (max-width: 1024px) {
+    nav .container {
+        flex-direction: row;
+        justify-content: space-between;
+        font-size: 18px;
+        padding: 15px;
+    }
+
+    .logo img{
+    width: 180px;
+    height: 55px;
+    }
+
+    .btn i {
+    font-size: 18px;
+    }
+
+    body {
+    background-image: url(../imgs/ChatGPT\ Image\ May\ 23\,\ 2025\,\ 02_06_25\ PM.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    background-size: cover;
+    }
+
+    .hero .hero_infos {
+        flex-direction: column;
+        align-items: center;
+        gap: 50px;
+        margin-top: 100px;
+        padding: 0 20px;
+        text-align: center;
+    }
+
+    .hero_info {
+        width: 100%;
+        text-align: center;
+    }
+
+    .hero_info h1 {
+        font-size: 36px;
+    }
+
+    .hero_info p {
+        font-size: 18px;
+    }
+
+    .hero_info button {
+        margin: 0 auto; /* Center the button */
+    }
+
+    .hero_img {
+        width: 55%;
+        height: auto;
+        margin: 0 auto;
+    }
+
+    .hero_img img{
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .btn, .hero_info button {
+        font-size: 16px;
+        padding: 8px 14px;
+    }
+
+    .modal_info {
+        width: 80%;
+        padding: 15px;
+    }
+
+    .modal_info form input,
+    .modal_info form label {
+        font-size: 17px;
+    }
+}

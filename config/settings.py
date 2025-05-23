@@ -129,3 +129,4 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static/"),  # ✅ Statik fayllarni yuklash
 ]
 
+CSRF_TRUSTED_ORIGINS = ['https://*.ngrok-free.app']

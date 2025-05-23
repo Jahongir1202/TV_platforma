@@ -104,7 +104,7 @@ def watch_video(request, video_id, category):
 # ✅ Logout qilish
 def user_logout(request):
     request.session.flush()
-    return redirect("user")
+    return redirect("home")
 
 
 def ariza_qoldirish(request):

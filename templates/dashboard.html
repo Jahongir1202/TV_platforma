@@ -54,13 +54,25 @@
         </svg></button>
     <header class="bg-gradient-to-r from-[#FAEDDD] to-[#DBF0FB] py-7 md:pb-14">
         <div class="w-full max-w-base px-5 mx-auto">
-            <div class="flex justify-between items-center md:mb-8"><a class="font-serif font-bold text-2xl sm:text-3xl"
-                    href="">Bola Tv</a><a
-                    class="hidden md:inline-block bg-blue-200 px-5 py-2 rounded transition-all duration-300 hover:bg-green-300"
-                    href="https://t.me/bolatvuz" target="_blank"><i class="fa-brands fa-telegram mr-2"></i> <span>Obuna
-                        bo'lish</span> </a><button id="menu"
-                    class="inline-block active:opacity-60 focus:outline-none md:hidden"><img src="{% static './img/img/menu.svg' %}"
-                        alt="Hamburger menu" width="55" height="55"></button></div>
+            <div class="flex justify-between items-center md:mb-8">
+                <a class="font-serif font-bold text-2xl sm:text-3xl"
+                    href="">Bola Tv
+                </a>
+                <a class="hidden md:inline-block bg-blue-200 px-5 py-2 rounded transition-all duration-300 hover:bg-green-300"
+                    href="https://t.me/bolatvuz" target="_blank">
+                    <i class="fa-brands fa-telegram mr-2"></i>
+                    <span>Obuna bo'lish</span>
+                </a>
+                <a class="hidden md:inline-block bg-blue-200 px-5 py-2 rounded transition-all duration-300 hover:bg-green-300"
+                    href="{% url 'test' %}" target="_blank">
+                    <span>Test ishlash</span>
+                </a>
+                <button id="menu"
+                    class="inline-block active:opacity-60 focus:outline-none md:hidden">
+                    <img src="{% static './img/img/menu.svg' %}"
+                        alt="Hamburger menu" width="55" height="55">
+                </button>
+            </div>
             <nav class="hidden md:flex justify-center items-center px-5 py-3 bg-white rounded-lg shadow-md">
                 <ul class="flex flex-wrap gap-x-9">
                     <li><a class="text-xl text-green-600 font-medium" href="{% url 'dashboard' %}">Bosh sahifa</a></li>
@@ -159,7 +171,7 @@
                     <div class="w-full grid grid-cols-2 gap-2 mb-8 md:w-1/2"><img class="w-full h-full"
                             src="{% static './img/img/pomidor.jpg' %}" alt="Tohir va Zuhra" width="300" height="100"> <img
                             class="w-full h-full" src="{% static './img/img/besh-mahluq.jpg' %}" alt="Ur toqmoq" width="300"
-                            height="100"> <img class="w-full h-full" src="{% static './img/img/besh-bola.jpg' %}"
+                                height="100"> <img class="w-full h-full" src="{% static './img/img/besh-bola.jpg' %}"
                             alt="Zumrat va Qimmat" width="300" height="100"> <img class="w-full h-full"
                             src="{% static './img/img/masha.jpg' %}" alt="Oltin tarvuz" width="300" height="100"></div>
                 </div>

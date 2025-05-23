@@ -1,14 +1,67 @@
+{% load static %}
 <!DOCTYPE html>
-<html lang="uz" xmlns="http://www.w3.org/1999/html">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard</title>
+    <title>Document</title>
+    <link rel="stylesheet" href="./static/home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-<a href="{% url 'user' %}">
-    <button>
-        Kirish
-    </button>
-</a>
+    <header>
+
+
+        <nav>
+            <div class="container">
+                 <div class="logo">
+                    <img src="{% static './img/img/logos.png' %}" alt="">
+                 </div>
+
+
+                 <div>
+                     <a href="{% url 'user' %}">
+                         <button class="btn">
+                            <i class="fa-solid fa-circle-user"></i>
+                            <p>Kirish</p>
+                        </button>
+                     </a>
+
+                 </div>
+            </div>
+        </nav>
+
+        <div class="hero">
+            <div class="container">
+                <div class="hero_infos">
+                    <div class="hero_info">
+                    <h1><span>Hayotingizni o‘zgartiruvchi</span> <br> birinchi qadam bu yerda</h1>
+                    <p>Kasb o‘rganing, daromad toping va o‘z orzuyingizdagi hayotni yarating. Biz bilan!</p>
+                    <a href="{% url 'ariza_qoldirish' %}" >
+                        <button class="kurska_yozilish">Kursga yozilish
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </a>
+                </div>
+
+                <div class="hero_img">
+                    <div class="box">
+                        <img src="{% static './img/img/hero_img.jpg' %}" alt="">
+                        <!-- <h1>1-rasm</h1> -->
+
+                    </div>
+                </div>
+                </div>
+
+
+
+
+
+
+            </div>
+        </div>
+    </header>
+
 </body>
+<script src="./js/main.js"></script>
+</html>
